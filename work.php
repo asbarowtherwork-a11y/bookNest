@@ -1,13 +1,10 @@
 <?php
 // Start session and connect to database
 session_start();
-$conn = new mysqli("localhost", "root", "", "shop_db");
-
-// Check connection
+include 'config.php';
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 // Fetch arrivals
 $sql = "SELECT * FROM products WHERE category = 'work'";
 $result = $conn->query($sql);

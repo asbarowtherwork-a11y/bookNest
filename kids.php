@@ -1,7 +1,7 @@
 <?php
 // Start session and connect to database
 session_start();
-$conn = new mysqli("localhost", "root", "", "shop_db");
+include 'config.php';
 
 // Check connection
 if ($conn->connect_error) {

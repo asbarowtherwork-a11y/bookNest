@@ -2,7 +2,9 @@
     session_start();
     include 'config.php';
 
-
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
     $ratings = []; // Array to store ratings for each product
 
 // Query to fetch average rating and total reviews for each product
